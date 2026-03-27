@@ -7,6 +7,7 @@
 #define MEMORY_SIZE 65536
 
 typedef uint16_t u16;
+typedef uint8_t u8;
 
 typedef struct cpu
 {
