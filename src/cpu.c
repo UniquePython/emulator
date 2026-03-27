@@ -2,6 +2,7 @@
 
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 void cpu_init(CPU *cpu)
 {
@@ -104,7 +105,7 @@ void cpu_run(CPU *cpu)
             cpu->reg[rd] = cpu->reg[ra];
             break; // mov
         case 0xD:
-            cpu->reg[rd] = (i8)imm8;
+            cpu->reg[ra] = (i8)imm8;
             break; // li
         case 0xE:
             cpu->running = 0;
