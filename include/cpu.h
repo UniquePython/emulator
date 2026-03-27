@@ -2,6 +2,7 @@
 #define CPU_H
 
 #include <stdint.h>
+#include <stdbool.h>
 
 #define MEMORY_SIZE 65536
 
@@ -12,7 +13,7 @@ typedef struct cpu
     u16 memory[MEMORY_SIZE];
     u16 reg[16];
     u16 pc;
-    int running;
+    bool running;
 } CPU;
 
 void cpu_init(CPU *cpu);
